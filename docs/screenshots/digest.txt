@@ -1,38 +1,49 @@
 IT SUPPORT — DAILY DIGEST
 Wednesday, 28 October 2026
 
-At a glance
-  Active tickets ......... 10
-  Resolved last 24h ...... 0
+AT A GLANCE
+  Active tickets ......... 9
+  Awaiting QA ............ 1
   Blocked / on hold ...... 3
   Unassigned ............. 2
   SLA breached ........... 2
+  Reopened by QA ......... 0
 
-⚠ SLA BREACHED — escalate now
-  TKT-1041  New staff onboarding — laptop + AD account fo…  (unassigned)
+SLA BREACHED — escalate now
+  TKT-1041  New staff onboarding — laptop + AD account…  (unassigned)
   TKT-1036  Backup job failing on file server FS-02  (Hafiz)
 
-Unassigned — needs an owner
+TIME BOX BLOWN
+  TKT-1040  20h of 4h  Production DB slow queries after…  (Tan)
+  TKT-1039  48h of 8h  Printer on level 3 not reachable…  (Priya)
+  TKT-1037  96h of 12h  Request: add MFA to vendor portal…  (Priya)
+  TKT-1036  20h of 6h  Backup job failing on file server…  (Hafiz)
+  TKT-1032  30h of 2h  Deploy v2.4.1 to staging — approv…  (Faiz)
+  TKT-1031  12h of 4h  Laptop battery swelling — 2 units…  (Hafiz)
+
+UNASSIGNED — needs an owner
   TKT-1041  New staff onboarding — laptop + AD account fo…  [High]
   TKT-1033  Guest WiFi captive portal shows expired certi…  [Medium]
 
-Blocked — waiting on someone else
-  TKT-1039  Printer on level 3 not reachable from…  → Waiting on vendor
-  TKT-1037  Request: add MFA to vendor portal acc…  → Waiting on access/approval
-  TKT-1032  Deploy v2.4.1 to staging — approval n…  → Waiting on access/approval
+BLOCKED — waiting on someone else
+  TKT-1039  Printer on level 3 not reachable fr…  -> Waiting on vendor
+  TKT-1037  Request: add MFA to vendor portal a…  -> Waiting on access/approval
+  TKT-1032  Deploy v2.4.1 to staging — approval…  -> Waiting on access/approval
 
-Moved in the last 24h
-  TKT-1042  In Progress  VPN drops every 15 minutes for finance te…
-  TKT-1041  Open         New staff onboarding — laptop + AD accoun…
-  TKT-1040  In Progress  Production DB slow queries after index re…
-  TKT-1039  Blocked      Printer on level 3 not reachable from VLA…
+AWAITING QA VERIFICATION
+  TKT-1035  Excel add-in crashes on Windows 11 24H2  (fixed by Tan)
+
+MOVED IN THE LAST 24H
+  TKT-1042  In Progress  VPN drops every 15 minutes for finance…
+  TKT-1041  Open         New staff onboarding — laptop + AD acco…
+  TKT-1040  In Progress  Production DB slow queries after index…
+  TKT-1039  Blocked      Printer on level 3 not reachable from V…
   TKT-1036  Open         Backup job failing on file server FS-02
-  TKT-1035  In Progress  Excel add-in crashes on Windows 11 24H2
-  TKT-1032  On Hold      Deploy v2.4.1 to staging — approval needed
-  TKT-1031  In Progress  Laptop battery swelling — 2 units, level 4
+  TKT-1032  On Hold      Deploy v2.4.1 to staging — approval nee…
+  TKT-1031  In Progress  Laptop battery swelling — 2 units, leve…
 
-Developer load
-  Faiz Rahman        ██░░░░░░ 2
-  Tan Wei Ming       █░░░░░░░ 1
-  Priya Nair         █░░░░░░░ 1
-  Hafiz Zulkifli     ████░░░░ 4
+TEAM LOAD
+  Faiz Rahman (L)        #....... 1
+  Tan Wei Ming           #....... 1
+  Hafiz Zulkifli (L)     ##...... 2
+  Priya Nair             ###..... 3

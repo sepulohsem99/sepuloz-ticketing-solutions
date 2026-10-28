@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sepuloz Ticketing — IT Support Portal</title>
-<meta name="description" content="A two-role IT ticketing portal: project managers assign and report, developers work the queue.">
+<meta name="description" content="A three-role IT ticketing portal: project managers assign and report, lead developers delegate with a time box, QA verifies and reopens.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f8cff'/><text x='50' y='70' font-size='58' font-family='Inter,sans-serif' font-weight='800' fill='white' text-anchor='middle'>S</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,27 +20,27 @@
       <div>
         <div class="brand"><div class="brand-mark">S</div><span>Sepuloz Ticketing</span></div>
         <div class="login-headline">IT support that <span>actually gets worked</span>.</div>
-        <div class="login-sub">Two roles. No permission matrix. A board that tells you what's stuck, a queue that tells you what's next, and a digest your PM stops writing by hand.</div>
+        <div class="login-sub">Three roles. No permission matrix. A board that tells you what's stuck, a queue that tells you what's next, and a QA gate so "resolved" means verified.</div>
         <div class="login-bullets">
+          <div class="login-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
+            <span>Leads delegate with a time box — and you see the burn against it</span>
+          </div>
+          <div class="login-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
+            <span>QA verifies every fix, or reopens it with evidence attached</span>
+          </div>
           <div class="login-bullet">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
             <span>Status changes require a reason — no more silent "Blocked"</span>
           </div>
           <div class="login-bullet">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
-            <span>Assignment shows each developer's live load before you commit</span>
-          </div>
-          <div class="login-bullet">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
             <span>One-click PM digest, ready to paste into WhatsApp</span>
-          </div>
-          <div class="login-bullet">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
-            <span>Duplicate detection the moment you start typing a title</span>
           </div>
         </div>
       </div>
-      <div style="font-size:11.5px;color:var(--text-3);margin-top:34px">Mockup · v0.1 · Oct 2026</div>
+      <div style="font-size:11.5px;color:var(--text-3);margin-top:34px">Mockup · v0.2 · Oct 2026</div>
     </div>
 
     <div class="login-right">
@@ -63,7 +63,17 @@
         </div>
         <div>
           <div class="role-name">Developer</div>
-          <div class="role-desc">Work assigned tickets, update status, comment</div>
+          <div class="role-desc">Lead: delegate with a time box · Dev: work the queue</div>
+        </div>
+      </button>
+
+      <button class="role-btn" data-role="qa">
+        <div class="role-ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div>
+          <div class="role-name">QA Tester</div>
+          <div class="role-desc">Create, attach evidence, verify fixes, reopen</div>
         </div>
       </button>
 
