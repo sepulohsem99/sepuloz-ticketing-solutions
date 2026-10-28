@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sepuloz Ticketing — IT Support Portal</title>
+<meta name="description" content="A two-role IT ticketing portal: project managers assign and report, developers work the queue.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f8cff'/><text x='50' y='70' font-size='58' font-family='Inter,sans-serif' font-weight='800' fill='white' text-anchor='middle'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div id="login">
+  <div class="login-card">
+    <div class="login-left">
+      <div>
+        <div class="brand"><div class="brand-mark">S</div><span>Sepuloz Ticketing</span></div>
+        <div class="login-headline">IT support that <span>actually gets worked</span>.</div>
+        <div class="login-sub">Two roles. No permission matrix. A board that tells you what's stuck, a queue that tells you what's next, and a digest your PM stops writing by hand.</div>
+        <div class="login-bullets">
+          <div class="login-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
+            <span>Status changes require a reason — no more silent "Blocked"</span>
+          </div>
+          <div class="login-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
+            <span>Assignment shows each developer's live load before you commit</span>
+          </div>
+          <div class="login-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
+            <span>One-click PM digest, ready to paste into WhatsApp</span>
+          </div>
+          <div class="login-bullet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m20 6-11 11-5-5"/></svg>
+            <span>Duplicate detection the moment you start typing a title</span>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:11.5px;color:var(--text-3);margin-top:34px">Mockup · v0.1 · Oct 2026</div>
+    </div>
+
+    <div class="login-right">
+      <h2>Sign in to continue</h2>
+      <p class="hint">Pick a role to enter the demo. In production this is SSO.</p>
+
+      <button class="role-btn" data-role="pm">
+        <div class="role-ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+        </div>
+        <div>
+          <div class="role-name">Project Manager</div>
+          <div class="role-desc">View, create, assign, update, delete, report</div>
+        </div>
+      </button>
+
+      <button class="role-btn" data-role="dev">
+        <div class="role-ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>
+        </div>
+        <div>
+          <div class="role-name">Developer</div>
+          <div class="role-desc">Work assigned tickets, update status, comment</div>
+        </div>
+      </button>
+
+      <div style="font-size:11px;color:var(--text-3);margin-top:16px;line-height:1.6">
+        Demo data only. Nothing is saved — refresh resets everything.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ APP ============ -->
+<div id="app">
+  <div class="topbar" id="topbar"></div>
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main" id="main"></main>
+</div>
+
+<div class="drawer-bg" id="drawer-bg"></div>
+<div class="drawer" id="drawer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

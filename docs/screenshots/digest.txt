@@ -1,0 +1,38 @@
+IT SUPPORT — DAILY DIGEST
+Wednesday, 28 October 2026
+
+At a glance
+  Active tickets ......... 10
+  Resolved last 24h ...... 0
+  Blocked / on hold ...... 3
+  Unassigned ............. 2
+  SLA breached ........... 2
+
+⚠ SLA BREACHED — escalate now
+  TKT-1041  New staff onboarding — laptop + AD account fo…  (unassigned)
+  TKT-1036  Backup job failing on file server FS-02  (Hafiz)
+
+Unassigned — needs an owner
+  TKT-1041  New staff onboarding — laptop + AD account fo…  [High]
+  TKT-1033  Guest WiFi captive portal shows expired certi…  [Medium]
+
+Blocked — waiting on someone else
+  TKT-1039  Printer on level 3 not reachable from…  → Waiting on vendor
+  TKT-1037  Request: add MFA to vendor portal acc…  → Waiting on access/approval
+  TKT-1032  Deploy v2.4.1 to staging — approval n…  → Waiting on access/approval
+
+Moved in the last 24h
+  TKT-1042  In Progress  VPN drops every 15 minutes for finance te…
+  TKT-1041  Open         New staff onboarding — laptop + AD accoun…
+  TKT-1040  In Progress  Production DB slow queries after index re…
+  TKT-1039  Blocked      Printer on level 3 not reachable from VLA…
+  TKT-1036  Open         Backup job failing on file server FS-02
+  TKT-1035  In Progress  Excel add-in crashes on Windows 11 24H2
+  TKT-1032  On Hold      Deploy v2.4.1 to staging — approval needed
+  TKT-1031  In Progress  Laptop battery swelling — 2 units, level 4
+
+Developer load
+  Faiz Rahman        ██░░░░░░ 2
+  Tan Wei Ming       █░░░░░░░ 1
+  Priya Nair         █░░░░░░░ 1
+  Hafiz Zulkifli     ████░░░░ 4
