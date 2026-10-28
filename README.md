@@ -78,6 +78,12 @@ Seven things nobody in the OSS tier does, built into the mockup:
 - WhatsApp/Telegram notification bridge
 - Public intake form for people without an account
 
+## Light & dark theme
+
+Toggle in the topbar (in-app) and top-right corner (login screen). Choice persists in `localStorage`, applied on `<html data-theme>` before first paint so there is no flash. Default is dark; the first toggle is opt-in.
+
+Both themes are token-driven from a single variable block — `:root` holds dark, `html[data-theme="light"]` overrides. No duplicated component CSS.
+
 ## Screens
 
 | File | What it shows |
@@ -98,6 +104,14 @@ Seven things nobody in the OSS tier does, built into the mockup:
 | `docs/screenshots/14-qa-reopen.png` | Reopen flow with reason, evidence and routing |
 | `docs/screenshots/15-qa-report.png` | Reopen rate per developer |
 | `docs/screenshots/16-mobile-qa.png` | Mobile layout |
+| `docs/screenshots/20-light-login.png` | Light theme — login |
+| `docs/screenshots/21-light-pm-board.png` | Light theme — PM board |
+| `docs/screenshots/22-light-pm-list.png` | Light theme — ticket table |
+| `docs/screenshots/23-light-digest.png` | Light theme — PM digest |
+| `docs/screenshots/24-light-ticket-detail.png` | Light theme — ticket drawer |
+| `docs/screenshots/25-light-qa-verify.png` | Light theme — QA queue |
+| `docs/screenshots/26-light-qa-checklist.png` | Light theme — verify checklist |
+| `docs/screenshots/27-light-delegate.png` | Light theme — delegate modal |
 
 ## Run it
 

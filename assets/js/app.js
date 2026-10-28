@@ -26,7 +26,33 @@ const ICON = {
   clock: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
   reopen: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>',
   shield: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+  moon: '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
+  sun: '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>',
 };
+
+/* ---------------- THEME ---------------- */
+const THEME_KEY = "sepuloz-theme";
+
+function currentTheme() {
+  return document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+}
+
+function applyTheme(mode) {
+  document.documentElement.setAttribute("data-theme", mode);
+  try { localStorage.setItem(THEME_KEY, mode); } catch (e) {}
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", mode === "light" ? "#eef2f7" : "#0b0f14");
+}
+
+function toggleTheme() {
+  applyTheme(currentTheme() === "light" ? "dark" : "light");
+}
+
+function initTheme() {
+  let saved = null;
+  try { saved = localStorage.getItem(THEME_KEY); } catch (e) {}
+  applyTheme(saved === "light" ? "light" : "dark");
+}
 
 /* ---------------- PERMISSIONS ---------------- */
 function isPM() { return state.user?.role === "pm"; }
@@ -131,9 +157,11 @@ function renderTopbar() {
       <input id="q" placeholder="Search tickets, IDs, requesters…" value="${esc(state.filter.q)}">
     </div>
     <div class="tb-spacer"></div>
+    <button class="theme-btn" data-theme-toggle aria-label="Toggle theme" title="Toggle light / dark">${ICON.moon}${ICON.sun}</button>
     ${canCreate ? `<button class="tb-btn primary" data-new>${ICON.plus} New ticket</button>` : ""}
     <div class="avatar ${u.role}" title="${esc(u.name)} · ${esc(u.title)}">${u.initials}</div>`;
   $("#q").addEventListener("input", e => { state.filter.q = e.target.value; renderView(); });
+  $$("[data-theme-toggle]").forEach(b => b.onclick = toggleTheme);
 }
 
 /* ---------------- FILTERING ---------------- */
@@ -1262,6 +1290,10 @@ function pickDeveloper() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
+  const tl = $("#theme-login");
+  if (tl) tl.onclick = toggleTheme;
+
   $$(".role-btn").forEach(b => b.onclick = () => {
     if (b.dataset.role === "dev") return pickDeveloper();
     const u = USERS.find(x => x.role === b.dataset.role);

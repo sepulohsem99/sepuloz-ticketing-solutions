@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sepuloz Ticketing — IT Support Portal</title>
 <meta name="description" content="A three-role IT ticketing portal: project managers assign and report, lead developers delegate with a time box, QA verifies and reopens.">
+<meta name="theme-color" content="#0b0f14">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("sepuloz-theme");
+      if (t !== "light") t = "dark";
+      document.documentElement.setAttribute("data-theme", t);
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", t === "light" ? "#eef2f7" : "#0b0f14");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  })();
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f8cff'/><text x='50' y='70' font-size='58' font-family='Inter,sans-serif' font-weight='800' fill='white' text-anchor='middle'>S</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +28,10 @@
 
 <!-- ============ LOGIN ============ -->
 <div id="login">
+  <button class="theme-btn-login" id="theme-login" aria-label="Toggle theme" title="Toggle light / dark">
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+  </button>
   <div class="login-card">
     <div class="login-left">
       <div>
