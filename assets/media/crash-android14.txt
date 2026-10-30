@@ -1,0 +1,21 @@
+FATAL EXCEPTION: main
+Process: my.gov.mbpg.ies, PID: 18422
+java.lang.SecurityException: Permission Denial: starting Intent
+  { act=android.media.action.IMAGE_CAPTURE flg=0x3 }
+  from ProcessRecord{9f2a1c 18422:my.gov.mbpg.ies/u0a231}
+  (pid=18422, uid=10231) with revoked permission android.permission.CAMERA
+
+  at android.os.Parcel.createExceptionOrNull(Parcel.java:3057)
+  at android.os.Parcel.createException(Parcel.java:3041)
+  at android.os.Parcel.readException(Parcel.java:2987)
+  at android.app.IActivityTaskManager$Stub$Proxy.startActivity(IActivityTaskManager.java:2872)
+  at android.app.Instrumentation.execStartActivity(Instrumentation.java:1741)
+  at android.app.Activity.startActivityForResult(Activity.java:5446)
+  at my.gov.mbpg.ies.SitaActivity.onCreate(SitaActivity.kt:88)
+  at android.app.Activity.performCreate(Activity.java:8305)
+  at android.app.ActivityThread.main(ActivityThread.java:8462)
+
+Device: samsung SM-A546E
+Android: 14 (API 34)
+App version: 2.4.1 (build 418)
+Timestamp: 2026-10-29 09:14:02 +08:00
