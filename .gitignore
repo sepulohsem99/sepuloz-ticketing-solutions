@@ -13,3 +13,6 @@ __pycache__/
 # Local
 .wrangler/
 node_modules/
+
+# Backup
+.lama/
